@@ -1,0 +1,126 @@
+.section-four {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    height: 700px !important;
+}
+
+.image-btc-section-four {
+    z-index: 0;
+    right: 42vw;
+    width: 665px;
+    height: 100%;
+    position: absolute;
+    background-position: right;
+    background-repeat: no-repeat;
+    background-image: url('../../images/img_gear.png');
+}
+
+.container-info-section-four {
+    font-family: sans-serif;
+}
+
+.info-section-four {
+    z-index: 5;
+    width: 655px;
+    padding: 50px;
+    margin-top: 120px;
+    margin-left: 13vw;
+    position: relative;
+    text-align: justify;
+}
+
+.info-section-four h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin: 10px 0 20px 0px;
+}
+
+.info-section-four p {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+@media(max-width: 374px) {
+    .info-section-four {
+        text-align: center !important;
+        margin-top: 0px !important;
+    }
+}
+
+@media(min-width: 425px) and (max-width: 1099px) {
+    .container-info-section-four {
+        font-family: sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .image-btc-section-four {
+        z-index: 0;
+        right: inherit;
+        width: 665px;
+        height: 100%;
+        position: absolute;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .info-section-four {
+        z-index: 5;
+        width: 655px;
+        padding: 50px;
+        position: relative;
+        text-align: justify;
+        margin-top: inherit;
+        margin-left: inherit;
+    }
+}
+
+@media(max-width: 690px) {
+    .info-section-four {
+        width: auto;
+        margin-top: 60px;
+        margin-left: inherit;
+    }
+    .image-btc-section-four {
+        width: 100%;
+        right: inherit;
+    }
+}
+
+@media(min-width: 1100px) {
+    .info-section-four {
+        z-index: 5;
+        width: 655px;
+        float: right;
+        padding: 50px;
+        margin-top: 50px;
+        position: relative;
+        text-align: justify;
+        margin-left: inherit;
+    }
+
+    .image-btc-section-four {
+        z-index: 0; 
+        width: 665px;
+        height: 700px;
+        right: inherit;
+        position: absolute;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .container-info-section-four {
+        width: 1000px;
+    }
+}
+
+@media(max-width: 500px) {
+    .info-section-four h2 {
+        font-size: 28px;
+    }
+    .info-section-four p {
+        font-size: 18px;
+    }
+}

@@ -1,0 +1,300 @@
+.section-three {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    overflow: hidden;
+    height: 654px !important;
+    justify-content: center;
+    /* background: rgb(0,107,155);
+    background: linear-gradient(95deg, rgb(0 134 184 / 1) 0%, rgba(0,108,150,1) 25%, rgba(0,51,80,1) 41%, rgba(0,0,0,1) 52%, rgba(0,0,0,1) 100%); */
+    background: rgb(0,107,155);
+    background: linear-gradient(80deg, rgb(0 134 184 / 1) 0%, rgba(0,108,150,1) 35%, rgba(0,51,80,1) 41%, rgba(0,0,0,1) 52%, rgba(0,0,0,1) 100%);
+}
+
+.section-three p,
+.section-three h2,
+.section-three label,
+.section-three input {
+    color: #fff;
+}
+
+.image-section-three {
+    right: 45vw;
+    height: auto;
+    position: absolute;
+    filter: opacity(0.5);
+}
+
+.left-section-three {
+    float: left;
+}
+
+.left-section-three img {
+    z-index: 0;
+}
+
+.right-section-three {
+    z-index: 6;
+    float: right;
+    width: 600px;
+    position: relative;
+    margin: 0 10px 0 380px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.maxVal,
+.brlContainer,
+.amountContainer {
+    margin-left: 120px;
+}
+
+.right-section-three h2 {
+    padding: 0;
+    width: 530px;
+    text-align: end;
+    font-size: 40px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-weight: normal;
+}
+
+.right-section-three h2::after {
+    content: '';
+    width: 40px;
+    height: 3px;
+    /* background-color: #00b9fc; */
+    margin-left: -40px;
+    bottom: 0;
+    position: absolute;
+    transition: all .2s ease-in-out;
+}
+
+.right-section-three>div>p:first-child {
+    font-size: 20px;
+    font-weight: 100;
+    color: #ffffffbd;
+    font-family: sans-serif;
+}
+
+.calcBRL {
+    align-items: flex-end;
+}
+
+.calcPos {
+    display: flex;
+    margin-top: 80px;
+    margin-left: 5px;
+    align-items: center;
+}
+
+.valBarContainer {
+    flex-direction: column;
+    flex: 1;
+    margin-bottom: 7px;
+}
+
+.valBar {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background: #555;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    height: 5px;
+    border-radius: 3px;
+}
+
+.valBar .fill {
+    height: 5px;
+    background: #00b9fc;
+    border-radius: 3px;
+}
+
+.valBar .handle {
+    width: 10px;
+    height: 10px;
+    background: #00b9fc;
+    border-radius: 7px;
+    transform: scale(1.8);
+    transition: all .1s ease-in-out;
+}
+
+.calcBRL .val {
+    padding-left: 25px;
+    font-size: 2.5rem;
+    font-weight: 200;
+    display: flex;
+    align-items: baseline;
+}
+
+.calcBRL .val::before {
+    font-size: 1.5rem;
+    content: 'R$';
+    line-height: 1.5rem;
+}
+
+.right-section-three input {
+    font-weight: 200;
+    line-height: 2.25rem;
+    padding-left: 6px;
+    font-size: 2.5rem;
+    background-color: transparent;
+    border: 0;
+    height: 3rem;
+    width: 200px;
+    outline: 0;
+}
+
+.right-section-three input,
+.right-section-three input::placeholder {
+    color: #fff;
+    font-weight: 400;
+}
+
+.maxVal::before {
+    color: red;
+    content: "Por favor insira um valor de até R$ 100.000,00";
+    opacity: 0;
+}
+
+.amountContainer {
+    margin-top: 30px;
+}
+
+.right-section-three>div {
+    width: 82%;
+    flex-direction: column;
+}
+
+.left>div>p:first-child {
+    font-size: 1.15rem;
+}
+
+.calcAmount .val {
+    font-size: 2rem!important;
+}
+
+.amountContainer p {
+    font-weight: 100;
+    color: #ffffffbd;
+    font-size: 1.15rem;
+    margin-bottom: 60px;
+    font-family: sans-serif;
+}
+
+.calcAmount .val,
+.calcBRL .val {
+    display: flex;
+    font-weight: 400;
+    align-items: baseline;
+}
+
+.right-section-three .calcAmount input {
+    font-size: 40px;
+    margin-right: 30px;
+    width: 201px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.calcAmount .val::after {
+    content: attr(data-coin); /* pega o atributo html */
+    line-height: 2.4rem;
+    font-size: 40px!important;
+}
+
+@media(max-width: 1099px) {
+    .section-three {
+        background: linear-gradient(80deg, rgb(0 118 165) 0%, rgba(0,108,150,1) 50%, rgba(0,51,80,1) 60%, rgba(0,0,0,1) 72%, rgba(0,0,0,1) 100%);
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .right-section-three {
+        z-index: 6;
+        width: 600px;
+        margin: 0 auto;
+        position: absolute;
+    }
+
+    .image-section-three {
+        right: inherit;
+        height: 654px;
+        position: relative;
+        filter: opacity(0.5);
+    }
+
+    .right-section-three h2 {
+        padding: 0;
+        width: 530px;
+        text-align: end;
+        font-size: 40px;
+        margin-top: inherit;
+        margin-bottom: 70px;
+        font-weight: normal;
+    }
+
+    .right-section-three {
+        z-index: 6;
+        float: inherit;
+        width: 600px;
+        margin-left: inherit;
+        position: absolute;
+        margin: inherit;
+        flex-direction: inherit;
+        justify-content: inherit;
+        align-items: inherit;
+    }
+}
+
+@media(max-width: 500px) {
+    .right-section-three h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+    .right-section-three>div {
+        text-align: center;
+    }
+    .calcAmount .val, .calcBRL .val {
+        justify-content: center;
+    }
+    .calcPos {
+        margin-left: inherit;
+        flex-direction: column-reverse;
+    }
+    .valBar {
+        width: 300px;
+    }
+    .calcBRL .val {
+        padding-bottom: 20px;
+    }
+}
+
+@media(max-width: 680px) {
+    .right-section-three {
+        width: auto;
+    }
+    .right-section-three h2 {
+        width: auto;
+    }
+    .right-section-three>div {
+        width: auto;
+        flex-direction: column;
+    }
+    .maxVal, .brlContainer, .amountContainer {
+        margin-left: inherit;
+    }
+}
+
+@media(min-width: 1099px) {
+    .section-three {
+        background: linear-gradient(80deg, rgb(0 120 165) 0%, rgba(0,108,150,1) 35%, rgba(0,51,80,1) 41%, rgba(0,0,0,1) 52%, rgba(0,0,0,1) 100%);
+    }
+}

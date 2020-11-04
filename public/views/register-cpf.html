@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../assets/icons/icon-logo.png">
+    <link rel="stylesheet" href="../assets/styles/register/register-cpf.css">
+    <title>Wallet Report - Cadastre-se</title>
+</head>
+<body>
+    <div class="container">
+        <img src="../assets/images/banner_back_login_register.png" alt="Wallet Report - Seu relatório de criptomoedas">
+        <form name="login" action="./register-data.html" method="GET" autocomplete="off">
+            <h3>Registro</h3>
+            <p>Digite um CPF válido para abrir sua conta</p>
+            <input placeholder="Nome" type="text" name="nome" required title="Preencha seu nome">
+            <input placeholder="CPF" type="text" name="cpf" required pattern="[0-9]{11}" title="Preencha seu CPF">
+            <div>
+                <a class="back" href="./index.html">Voltar</a>
+                <button type="submit">Continuar</button>
+            </div>
+            <a href="./login.html">Já tem uma conta? Faça login.</a>
+        </form>
+    </div>
+</body>
+</html>

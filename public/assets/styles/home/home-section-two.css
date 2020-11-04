@@ -1,0 +1,117 @@
+.section-two {
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    height: 700px !important;
+}
+
+.image-btc-section-two {
+    z-index: 0;
+    width: 600px;
+    height: 700px;
+    position: absolute;
+    background-position: center right;
+    background-repeat: no-repeat;
+    background-image: url('../../images/img_coin.png');
+}
+
+.container-info-section-two {
+    font-family: sans-serif;
+}
+
+.info-section-two {
+    z-index: 5;
+    width: 650px;
+    padding: 50px;
+    margin-top: 120px;
+    position: relative;
+    margin-right: 500px;
+    text-align: justify;
+}
+
+.info-section-two h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.info-section-two p {
+    font-size: 26px;
+    font-weight: 500;
+}
+
+@media(max-width: 374px) {
+    .info-section-two {
+        padding: 48px !important;
+        text-align: center !important;
+    }
+}
+
+@media(max-width: 1099px) {
+    .container-info-section-two {
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-section-two {
+        z-index: 5;
+        padding: 50px;
+        margin-top: inherit;
+        position: relative;
+        margin-right: inherit;
+        text-align: justify;
+        margin: 0 auto;
+    }
+}
+
+@media(max-width: 500px) {
+    .info-section-two h2 {
+        font-size: 28px;
+    }
+    .info-section-two p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 680px) {
+    .info-section-two {
+        width: auto;
+    }
+    .image-btc-section-two {
+        width: 100%;
+    }
+}
+
+@media(min-width: 1100px) {
+    .image-btc-section-two {
+        z-index: 0;
+        right: inherit;
+        width: 1000px;
+        height: 700px;
+        position: absolute;
+        background-position: right;
+        background-repeat: no-repeat;
+    }
+
+    .info-section-two {
+        z-index: 5;
+        width: 650px;
+        padding: 50px;
+        margin-top: 60px;
+        position: relative;
+        text-align: justify;
+    }
+
+    .container-info-section-two {
+        width: 1000px;
+    }
+}
+
+@media(min-width: 2390px) {
+    .info-section-two {
+        margin-top: 60px;
+    }
+}

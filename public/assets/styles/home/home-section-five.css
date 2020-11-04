@@ -1,0 +1,318 @@
+.section-five {
+    width: 100%;
+    color: #fff;
+    display: flex;
+    height: 1000px;
+    overflow: hidden;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #090a13;
+}
+
+.section-five p {
+    margin: 0 !important;
+}
+
+.section-five>header {
+	height: 50px;
+    display: flex;
+    /* margin-bottom: 40px; */
+    margin: 40px 0;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.section-five>header h2 {
+    font-size: 32px;
+    color: #ffc500;
+}
+
+.section-five .subscribe {
+    display: flex;
+	justify-content: end;
+	flex-direction: column;
+}
+
+.section-five .subscribe h3 {
+    margin: 0;
+    display: flex;
+    font-size: 35px;
+	margin-top: 10px;
+	margin-bottom: -5px;
+}
+
+.section-five .subscribe h3 div {
+    margin-left: 10px;
+    color: #00b9fc !important;
+}
+
+.section-five .subscribe p {
+    font-size: 25px;
+    text-align: center;
+}
+
+.section-five .subscribe a {
+    color: #fff;
+    margin: 30px 0;
+    font-size: 17px;
+    font-weight: 600;
+    align-self: center;
+    border-radius: 3px;
+    text-transform: none;
+    text-decoration: none;
+    background-color: #ccab3a;
+    transition: all .5s ease-out;
+    padding: 15px 30px !important;
+}
+
+.section-five .subscribe a:hover {
+    box-shadow: 0px 0px 20px 2px #ccab3a;
+}
+
+.section-five-graphs-container {
+    width: 925px;
+    display: flex;
+    height: 610px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Resets */
+.graph-container,
+.graph-container div,
+.graph-container a,
+.graph-container span {
+    margin: 0;
+    padding: 0;
+}
+
+/*  Graph Container */
+.graph-container {
+    position: relative;
+    width: 400px;
+    height: 50px;
+    background-color: #090a13;
+}
+
+.graph-container>div {
+    position: absolute;
+    width: inherit;
+    height: inherit;
+}
+
+/* Text Styles */
+#tooltip,
+.graph-info a {
+    height: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.tickLabel {
+    font-weight: bold;
+    font-size: 12px;
+    color: #666;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* Tooltip */
+#tooltip {
+    display: none;
+    color: #ffffffb8;
+    padding: 5px 10px;
+	border-radius: 5px;
+    position: absolute;
+	border: 1px solid #ffffffb8;
+    background-color: #090a13 !important;
+}
+
+/* Links */
+.graph-info a {
+    position: relative;
+    display: inline-block;
+    padding: 7px 10px 5px 30px;
+    margin-right: 10px;
+    text-decoration: none;
+    cursor: default;
+}
+
+/* Color Circle for Links */
+.graph-info a:before {
+    position: absolute;
+    display: block;
+    content: '';
+    width: 8px;
+    height: 8px;
+    top: 13px;
+    left: 13px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/* Clear Floats */
+.graph-info:before,
+.graph-info:after,
+.graph-container:before,
+.graph-container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.tickLabels {
+    display: none !important;
+}
+
+.container-details-coin-0,
+.container-details-coin-1,
+.container-details-coin-2,
+.container-details-coin-3,
+.container-details-coin-4,
+.container-details-coin-5 {
+    /* margin: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #fff0;
+    box-shadow: 0px -10px 20px 11px #00000085; */
+    margin: 0 10px 10px 10px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid #fff0;
+    /* box-shadow: 0px -20px 20px 15px #00000085; */
+    box-shadow: 0px -20px 20px 11px #00000085;
+}
+
+.container-details-coin-0 header,
+.container-details-coin-1 header,
+.container-details-coin-2 header,
+.container-details-coin-3 header,
+.container-details-coin-4 header,
+.container-details-coin-5 header {
+    display: flex;
+}
+
+.container-details-coin-0 header div,
+.container-details-coin-1 header div,
+.container-details-coin-2 header div,
+.container-details-coin-3 header div,
+.container-details-coin-4 header div,
+.container-details-coin-5 header div {
+    height: 50px;
+    display: flex;
+    padding-left: 25px;
+    flex-direction: column;
+}
+
+.container-details-coin-0 header h3,
+.container-details-coin-1 header h3,
+.container-details-coin-2 header h3,
+.container-details-coin-3 header h3,
+.container-details-coin-4 header h3,
+.container-details-coin-5 header h3 {
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+}
+
+.container-details-coin-0 header p,
+.container-details-coin-1 header p,
+.container-details-coin-2 header p,
+.container-details-coin-3 header p,
+.container-details-coin-4 header p,
+.container-details-coin-5 header p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+.container-details-coin-0 header img,
+.container-details-coin-1 header img,
+.container-details-coin-2 header img,
+.container-details-coin-3 header img,
+.container-details-coin-4 header img,
+.container-details-coin-5 header img {
+    width: 50px;
+}
+
+.info-coin {
+    font-size: 20px;
+    text-align: left;
+    padding-top: 10px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+@media(max-width: 379px) {
+    .section-five>header h2 {
+        font-size: 22px;
+    }
+    .section-five .subscribe h3 {
+        font-size: 22px;
+    }
+    .section-five .subscribe p {
+        font-size: 14px;
+    }
+}
+
+@media(min-width: 380px) and (max-width: 500px) {
+    .section-five>header {
+        margin-bottom: 30px;
+    }
+    .section-five>header h2 {
+        font-size: 28px;
+    }
+    .section-five .subscribe h3 {
+        font-size: 28px;
+        margin-bottom: inherit;
+    }
+    .section-five .subscribe p {
+        font-size: 18px;
+    }
+}
+
+@media(max-width: 500px) {
+    .graph-container {
+        width: 300px;
+    }
+    .section-five .subscribe h3 {
+        margin-bottom: 5px;
+    }
+}
+
+@media(min-width: 780px) {
+    .section-five {
+        height: 1000px;
+    }
+    .section-five>header {
+        height: 150px;
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 949px) {
+    .section-five {
+        height: 1500px;
+    }
+    .section-five-graphs-container {
+        display: flex;
+        width: auto;
+        height: auto;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media(min-width: 950px) {
+    .section-five .subscribe h3 {
+        font-size: 40px;
+    }
+    
+    .section-five .subscribe p {
+        font-size: 30px;
+    }
+}

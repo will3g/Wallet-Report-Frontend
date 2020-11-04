@@ -1,0 +1,282 @@
+.prices .each[data-coin=ETH],
+.prices .each[data-coin=XRP] {
+    z-index: 3 !important;
+}
+
+.prices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(100% - 50px);
+    width: 100%;
+    max-width: 1200px;
+    justify-content: space-around;
+}
+
+.prices .each {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 50px;
+    padding: 8px 0 8px 0;
+    margin: 0 10px 0 10px;
+    justify-content: space-between;
+    cursor: default;
+    z-index: 2;
+    position: relative;
+}
+
+.prices .each .title {
+    align-items: center;
+    font-weight: 400;
+    line-height: 1;
+    color: #777;
+    z-index: 1;
+}
+
+.prices .each .title img {
+    height: 16px;
+    padding-right: 3px;
+    opacity: .9;
+}
+
+.prices .priceContainer {
+    position: relative;
+}
+
+.prices .each .price {
+    line-height: 1.2;
+    font-size: 12px;
+    color: #666;
+    font-weight: 400;
+    position: relative;
+    z-index: 2;
+}
+
+.prices .each .price::before {
+    content: 'R$';
+    padding-right: 3px;
+}
+
+.prices .arrow {
+    top: 0px;
+    z-index: 1;
+    right: -13px;
+    position: absolute;
+}
+
+.prices .arrow::after {
+    height: 100%;
+    width: 10px;
+    line-height: 13px;
+}
+
+.price.glow-up+.arrow::after {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23178a00" d="M6.101 261.899L25.9 281.698c4.686 4.686 12.284 4.686 16.971 0L198 126.568V468c0 6.627 5.373 12 12 12h28c6.627 0 12-5.373 12-12V126.568l155.13 155.13c4.686 4.686 12.284 4.686 16.971 0l19.799-19.799c4.686-4.686 4.686-12.284 0-16.971L232.485 35.515c-4.686-4.686-12.284-4.686-16.971 0L6.101 244.929c-4.687 4.686-4.687 12.284 0 16.97z" class=""></path></svg>');
+}
+
+.prices .each>.more {
+    background-color: #fff;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, .2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 30px;
+    padding: 6px 20px 6px 20px;
+    cursor: default;
+    transition: all .15s ease;
+    z-index: -1;
+    position: absolute;
+    top: 5px;
+    left: 0;
+    transform: rotateX(-180deg);
+    flex-direction: column;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.prices .each>.more>.var,
+.prices .each>.more>.vol {
+    align-items: flex-end;
+}
+
+.prices .each>.more>.var>span:first-child,
+.prices .each>.more>.vol>span:first-child {
+    font-size: .75rem;
+    padding-right: 5px;
+    line-height: 100%;
+}
+
+.prices .each>.more>.var>span:last-child,
+.prices .each>.more>.vol>span:last-child {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 100%;
+}
+
+.prices .each>.more>.var,
+.prices .each>.more>.vol {
+    align-items: flex-end;
+}
+
+.prices .each .more .var.down {
+    color: red;
+}
+
+.prices .each::after {
+    content: '';
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 5px;
+    z-index: 0;
+}
+
+.prices .each[data-coin=BTC] {
+    width: 250px;
+    height: 80px;
+    margin-bottom: 7px;
+}
+
+.prices .each[data-coin=BTC]::before {
+    position: absolute;
+    right: 7px;
+    top: 5px;
+    width: 18px;
+    z-index: 1;
+}
+
+.prices .each[data-coin=BTC]::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="%23ff0000" d="M5.09 154.87c-6.66 6.16-6.79 16.59-.35 22.97l34.24 33.96c6.14 6.09 16.02 6.23 22.4.38 6.99-6.4 14.31-12.22 21.65-18.01l-64.96-50.21c-4.3 3.71-8.79 7.04-12.98 10.91zm471.75 181.9l45.42-45.21c6.52-6.46 6.29-17.06-.57-23.17-64.94-57.74-148.91-82.66-230.34-74.98l-83.16-64.27c125.94-38.36 267.75-11.01 370.43 83.05 6.38 5.85 16.26 5.71 22.4-.38l34.24-33.96c6.44-6.39 6.3-16.82-.35-22.97C496.46 26.82 298.08-.76 133.42 71.35L45.47 3.37C38.49-2.05 28.43-.8 23.01 6.18L3.37 31.45C-2.05 38.42-.8 48.47 6.18 53.9l588.36 454.73c6.98 5.43 17.03 4.17 22.46-2.81l19.64-25.27c5.42-6.97 4.17-17.03-2.81-22.45L476.84 336.77zm-358.53-68.38c-6.86 6.1-7.08 16.7-.57 23.17l34.28 34.01c5.97 5.93 15.59 6.32 21.94.8 13.35-11.6 28.01-20.66 43.15-28.55l-68.36-52.83c-10.48 7.15-20.74 14.78-30.44 23.4zM256 416c0 35.35 28.65 64 64 64 31.91 0 58.15-23.42 62.99-53.98l-88.7-68.56C271.77 367.37 256 389.82 256 416z" class=""></path></svg>');
+}
+
+.prices .each[data-coin=BTC]::before {
+    content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="%23178a00" d="M634.91 154.88C457.74-8.99 182.19-8.93 5.09 154.88c-6.66 6.16-6.79 16.59-.35 22.98l34.24 33.97c6.14 6.1 16.02 6.23 22.4.38 145.92-133.68 371.3-133.71 517.25 0 6.38 5.85 16.26 5.71 22.4-.38l34.24-33.97c6.43-6.39 6.3-16.82-.36-22.98zM320 352c-35.35 0-64 28.65-64 64s28.65 64 64 64 64-28.65 64-64-28.65-64-64-64zm202.67-83.59c-115.26-101.93-290.21-101.82-405.34 0-6.9 6.1-7.12 16.69-.57 23.15l34.44 33.99c6 5.92 15.66 6.32 22.05.8 83.95-72.57 209.74-72.41 293.49 0 6.39 5.52 16.05 5.13 22.05-.8l34.44-33.99c6.56-6.46 6.33-17.06-.56-23.15z" class=""></path></svg>') !important;
+}
+
+.prices .each[data-coin=BTC] .title {
+    font-size: 32px;
+    color: #666;
+}
+
+.prices .each[data-coin=BTC] .title {
+    font-size: 32px;
+    color: #666;
+}
+
+.prices .each[data-coin=BTC] .title img {
+    height: 28px;
+}
+
+.prices .each[data-coin=BTC] .price {
+    font-size: 20px;
+}
+
+.prices .each[data-coin=BTC] .arrow {
+    width: 15px;
+    right: -18px !important;
+}
+
+[data-coin=BTC] .arrow::after {
+    width: 14px !important;
+    line-height: 29px !important;
+}
+
+.prices .each[data-coin=BTC]>.more {
+    height: 65px !important;
+    padding: 10px 20px 8px 20px !important;
+}
+
+.prices .each[data-coin=BTC]>.more>.var>span:first-child,
+.prices .each[data-coin=BTC]>.more>.vol>span:first-child {
+    font-size: .875rem !important;
+}
+
+.prices .each[data-coin=BTC]>.more>.var>span:last-child,
+.prices .each[data-coin=BTC]>.more>.vol>span:last-child {
+    font-size: 15px !important;
+}
+
+.prices .each[data-coin=BTC]>.more>.var>span:first-child,
+.prices .each[data-coin=BTC]>.more>.vol>span:first-child {
+    font-size: .875rem !important;
+}
+
+.prices .each[data-coin=BTC]>.more>.var>span:last-child {
+    font-size: 14px !important;
+}
+
+.prices .each[data-coin=BCH],
+.prices .each[data-coin=LTC] {
+    z-index: 4 !important;
+}
+
+.prices .each[data-coin=ETH],
+.prices .each[data-coin=XRP] {
+    z-index: 3 !important;
+}
+
+.prices .each[data-coin=BTC]:hover>.more {
+    top: -50px;
+    transform: rotateX(0);
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    animation: prices-flip-btc .4s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+.prices .each:hover>.more {
+    top: -40px;
+    height: 52px;
+    transform: rotateX(0);
+    backface-visibility: visible;
+    -webkit-backface-visibility: visible;
+    animation: prices-flip .4s cubic-bezier(.25, .46, .45, .94) both;
+}
+
+.prices .each:hover {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+@media(max-width: 767px) {
+    .prices .each[data-coin=ETH],
+    .prices .each[data-coin=LTC] {
+        display: none;
+    }
+}
+
+@media(max-width: 780px) {
+    .prices .each[data-coin=BTC]>.more {
+        top: -65px;
+    }
+    .prices .each[data-coin=BTC]:hover>.more {
+        top: -100px;
+    }
+
+    .prices .each>.more {
+        top: -40px;
+    }
+    
+    .prices .each:hover>.more {
+        top: -90px;
+    }
+}
+
+@media(max-width: 1099px) {
+    .prices .each[data-coin=BCH],
+    .prices .each[data-coin=XRP] {
+        display: none;
+    }
+}
