@@ -167,12 +167,12 @@ function buildGraph(response, name, img, index) {
 }
 
 Promise.all([
-	fetch("https://localhost:5001/details/BTC").then(res => res.json()),
-	fetch("https://localhost:5001/details/XRP").then(res => res.json()),
-	fetch("https://localhost:5001/details/ETH").then(res => res.json()),
-	fetch("https://localhost:5001/details/LTC").then(res => res.json()),
-	fetch("https://localhost:5001/details/ZEC").then(res => res.json()),
-	fetch("https://localhost:5001/details/DASH").then(res => res.json()),
+	fetch("https://localhost:5001/details/btc").then(res => res.json()),
+	fetch("https://localhost:5001/details/xrp").then(res => res.json()),
+	fetch("https://localhost:5001/details/eth").then(res => res.json()),
+	fetch("https://localhost:5001/details/ltc").then(res => res.json()),
+	fetch("https://localhost:5001/details/zec").then(res => res.json()),
+	fetch("https://localhost:5001/details/dash").then(res => res.json()),
 ]).then((res) => {
 	const names = ['Bitcoin', 'Ripple', 'Ethereum', 'Litecoin', 'Zcash', 'Dash'];
 	const images = ['../assets/icons/coins/btc.png', '../assets/icons/coins/xrp.png', '../assets/icons/coins/eth.png', '../assets/icons/coins/ltc.png', '../assets/icons/coins/zec.png', '../assets/icons/coins/dash-home.svg'];
