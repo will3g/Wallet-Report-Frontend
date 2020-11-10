@@ -1,7 +1,7 @@
 const container = document.querySelector('.square');
 const inputName = container.querySelector('[name=nome]');
 const inputCpf = container.querySelector('[name=cpf]');
-const anchor = container.querySelector('[data-name=continue]');
+const button = container.querySelector('[data-name=continue]');
 
 function clearVariables() {
     localStorage.removeItem('name');
@@ -40,7 +40,7 @@ function validateCPF(cpf) {
     clearVariables();
     setVariables();
 
-    anchor.addEventListener('click', function () {
+    button.addEventListener('click', function () {
 
         if (!validationName(inputName.value))
             Message('Mínimo de 10 caracteres para o nome.');

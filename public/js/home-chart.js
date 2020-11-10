@@ -5,20 +5,6 @@ const li = document.querySelector('.section-five-graphs-container');
 
 let coins = [];
 
-			//[posição, valor]	
-			// data: [
-			// 	[1, 500],
-			// 	[2, 600],
-			// 	[3, 800],
-			// 	[4, 750],
-			// 	[5, 600],
-			// 	[6, 900],
-			// 	[7, 700],
-			// 	[8, 950],
-			// 	[9, 830],
-			// 	[10, 1000]
-			// ],
-
 function buildData(multArray, coin, index1) {
 	for (let index2 = 0; index2 < 2; index2++)
 		if (index2 == 0)
@@ -178,7 +164,6 @@ Promise.all([
 	const images = ['../assets/icons/coins/btc.png', '../assets/icons/coins/xrp.png', '../assets/icons/coins/eth.png', '../assets/icons/coins/ltc.png', '../assets/icons/coins/zec.png', '../assets/icons/coins/dash-home.svg'];
 	
 	res.map((item, index) => {
-		// console.log(item);
 		buildGraph(item, names[index], images[index], index);
 	});
 

@@ -10,16 +10,18 @@
 <body>
     <div class="container">
         <img src="../assets/images/banner_back_login_register.png" alt="Wallet Report - Seu relatório de criptomoedas">
-        <form name="login" action="./dashboard.html" method="GET" autocomplete="off">
+        <div class="square">
             <p>Login</p>
-            <input placeholder="CPF" type="text" name="cpf" required="" pattern="[0-9]{11}" title="Preencha seu CPF">
-            <input placeholder="SENHA" type="password" name="password" required="" title="Preencha sua senha">
+            <p data-name="message">Login</p>
+            <input placeholder="CPF (somente números)" type="text" name="cpf" title="Preencha seu CPF">
+            <input placeholder="SENHA" type="password" name="password" title="Preencha sua senha">
             <div>
                 <a class="back" href="./index.html">Voltar</a>
-                <button type="submit">Entrar</button>
+                <button data-name="enter">Entrar</button>
             </div>
             <a href="./register-cpf.html">Criar uma conta</a>
-        </form>
+        </div>
     </div>
+    <script src="../js/login.js"></script>
 </body>
 </html>
