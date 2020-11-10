@@ -18,7 +18,11 @@ img {
     width: 500px;
 }
 
-form {
+.message-error {
+    color: #f00 !important;
+}
+
+.square {
     width: 360px;
     height: 460px;
     display: flex;
@@ -82,27 +86,27 @@ input[type=email] {
     text-transform: lowercase;
 }
 
-form div {
+.square div {
     margin-top: 10px;
 }
 
-form div button {
+.square div button {
     cursor: pointer;
     background-color: #00355a;
     transition: ease-in-out .5s;
 }
 
-form div a,
-form div button {
+.square div a,
+.square div button {
     font-size: 18px;
     border-radius: 5px;
 }
 
-form > a {
+.square > a {
     margin-top: 30px;
 }
 
-form > p {
+.square > p {
     margin-bottom: 30px;
 }
 
@@ -113,13 +117,13 @@ form > p {
 }
 
 .back:hover,
-form div button:hover {
+.square div button:hover {
     border-color: #00b9fc;
     background-color: #00b9fc;
 }
 
 @media (max-width: 360px) {
-    form {
+    .square {
         width: 240px !important;
         margin-top: 50px !important;
     }
@@ -127,26 +131,26 @@ form div button:hover {
         width: 260px !important;
         margin: 5px 0 20px !important;
     }
-    form p {
+    .square p {
         text-align: center !important;
     }
-    form div {
+    .square div {
         margin-top: 10px !important;
     }
-    form div a {
+    .square div a {
         margin-right: inherit !important;
     }
-    form div button {
+    .square div button {
         margin-left: inherit !important;
     }
 }
 
 @media(min-width: 480px) {
-    form div a {
-        margin-right: 20px;
+    .square div a {
+        margin-right: 10px;
     }
-    form div button {
-        margin-left: 20px;
+    .square div button {
+        margin-left: 10px;
     }
 }
 
@@ -159,7 +163,7 @@ form div button:hover {
         width: 300px;
     }
 
-    form {
+    .square {
         width: 300px;
         margin-top: 50px;
     }

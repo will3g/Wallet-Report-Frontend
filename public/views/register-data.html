@@ -10,18 +10,19 @@
 <body>
     <div class="container">
         <img src="../assets/images/banner_back_login_register.png" alt="Wallet Report - Seu relatório de criptomoedas">
-        <form name="login" action="./login.html" method="POST" autocomplete="off">
+        <div class="square">
             <h3>Registro</h3>
-            <p>Digite um CPF válido para abrir sua conta</p>
+            <p data-name="message">Digite o seu e-mail e sua senha.</p>
             <input placeholder="EMAIL" type="email" name="email" required title="Preencha seu E-Mail">
-            <input placeholder="SENHA" type="password" name="password" required title="Preencha sua senha">
-            <input placeholder="REPITA A SENHA" type="password" required title="Repita sua senha">
+            <input placeholder="SENHA" type="password" name="password" minlength="8" required title="Preencha sua senha">
+            <input placeholder="REPITA A SENHA" type="password" name="rpassword" minlength="8" required title="Repita sua senha">
             <div>
                 <a class="back" href="./register-cpf.html">Voltar</a>
-                <button type="submit">Continuar</button>
+                <button data-name="continue">Continuar</button>
             </div>
             <a href="./login.html">Já tem uma conta? Faça login.</a>
-        </form>
+        </div>
     </div>
+    <script src="../js/second-form.js"></script>
 </body>
 </html>
