@@ -14,7 +14,8 @@ setTimeout((() => {
     fetch("https://localhost:5001/api/coin/xrp");
     fetch("https://localhost:5001/api/coin/zec");
     fetch("https://localhost:5001/api/coin/zrx");
-}), 300000);
+}), 36000000 );
 
-// 60000); // 1 minute
-// 300000); // 5 minutes
+// 60000 // 1 minute
+// 300000 // 5 minutes
+// 36000000 // 10 hours
