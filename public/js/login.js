@@ -33,11 +33,15 @@ function ValidatePassword(pass) {
             Message('Senha deve ter no mínimo 8 caracteres.');
 
         if (validateCPF(inputCpf.value) && ValidatePassword(inputPassword.value))
-            fetch(`https://localhost:5001/api/user/${inputCpf.value}`).then(res => res.json()).then(res => {
-                if (res[0].senha == inputPassword.value) {
-                    window.location.replace("./dashboard.html");      
+            fetch(`https://localhost:5001/api/user/${inputCpf.value}`).then(res => res.json()).then(response => {
+                if (response.length > 0) {
+                    if (response[0].senha == inputPassword.value) {
+                        window.location.replace('./dashboard.html');      
+                    } else {
+                        Message('Senha incorreta.');
+                    }
                 } else {
-                    Message('Senha incorreta.');
+                    Message('Usuário inexistente.');
                 }
             });
     });
