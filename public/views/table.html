@@ -31,13 +31,6 @@
                                 <i class="ti-menu"></i>
                             </a>
                         </li>
-                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
-                                href="javascript:void(0)"><i class="fa fa-search"></i></a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search enter"> <a
-                                    class="srh-btn"><i class="fa fa-times"></i></a>
-                            </form>
-                        </li>
                     </ul>
                     <ul class="navbar-nav my-lg-0">
                         <li class="nav-item dropdown">
@@ -72,7 +65,6 @@
                 </nav>
 
             </div>
-
         </aside>
         <div class="page-wrapper">
             <div class="container-fluid">
@@ -82,9 +74,12 @@
                     </div>
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item active">Tabela</li>
-                            </ol>
+                            <div class="search-coins input-group">
+                                <input id="input-search-coin" type="text" class="form-control" placeholder="Busque a moeda que deseja" aria-label="Buscador de moedas" aria-describedby="basic-addon2">
+                                <div class="input-group-append">
+                                  <button id="btn-search-coin" class="btn btn-outline-secondary" type="button"><i class="ti-search"></i></button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -96,14 +91,6 @@
                                     <div>
                                         <h5 class="card-title">Relatório de criptomoeda</h5>
                                     </div>
-                                    <!-- <div class="ml-auto">
-                                    <select class="custom-select b-0">
-                                        <option>Outubro</option>
-                                        <option value="1">February</option>
-                                        <option value="2" selected="">March</option>
-                                        <option value="3">April</option>
-                                    </select>
-                                </div> -->
                                 </div>
                             </div>
                             <div class="table-responsive">
@@ -112,65 +99,11 @@
                                         <tr>
                                             <th>Criptomoeda</th>
                                             <th>Data</th>
+                                            <th>Horário</th>
                                             <th>Valor</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">21/10/2020</td>
-                                            <td><span class="text-success">R$ 73.124,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">20/10/2020</td>
-                                            <td><span class="text-danger">R$ 72.258,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">19/10/2020</td>
-                                            <td><span class="text-success">R$ 73.300,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">18/10/2020</td>
-                                            <td><span class="text-success   ">R$ 72.129,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">17/10/2020</td>
-                                            <td><span class="text-danger">R$ 71.510,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">16/10/2020</td>
-                                            <td><span class="text-success">R$ 72.123,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">15/10/2020</td>
-                                            <td><span class="text-info">R$ 72.130,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">14/10/2020</td>
-                                            <td><span class="text-danger">R$ 70.849,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">13/10/2020</td>
-                                            <td><span class="text-success">R$ 72.157,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">12/10/2020</td>
-                                            <td><span class="text-danger">R$ 71.354,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">11/10/2020</td>
-                                            <td><span class="text-success">R$ 70.958,00</span></td>
-                                        </tr>
                                     </tbody>
                                 </table>
                             </div>
@@ -192,6 +125,7 @@
     <script src="../utils/node_modules/sticky-kit-master/dist/sticky-kit.min.js"></script>
     <script src="../utils/node_modules/sparkline/jquery.sparkline.min.js"></script>
     <script src="../js/dashboard/custom.min.js"></script>
+    <script src="../js/dashboard/table.js"></script>
 </body>
 
 </html>
