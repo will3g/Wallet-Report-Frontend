@@ -2,7 +2,7 @@ const dictionaryToCoins = [
 	{
 		slug: 'bch',
 		name: 'Bitcoin Cash',
-		img: '../assets/icons/coins/bch.png'
+		img: '../assets/icons/coins/bch2.png'
 	},
 	{
 		slug: 'brzx',
@@ -133,6 +133,8 @@ function getCoin(slug = 'btc', name = 'Bitcoin', img = '../assets/icons/coins/bt
 		let LastPercentValue = 0;
 
 		table.innerHTML = '';
+
+		response = response.reverse();
 
 		response.map(coin => {
 
