@@ -62,7 +62,7 @@ const dictionaryToCoins = [
 	{
 		slug: 'xrp',
 		name: 'Ripple',
-		img: '../assets/icons/coins/xrp.png'
+		img: '../assets/icons/coins/xrp-home.png'
 	},
 	{
 		slug: 'zec',
