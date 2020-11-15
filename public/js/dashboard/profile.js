@@ -92,7 +92,7 @@ function MarkupProfileUser(name, email, cpf) {
         <img src="../assets/icons/user.png" class="img-circle" width="150" />
         <h4 class="card-title person-name m-t-10">${name}</h4>
         <h6 class="card-subtitle person-name">Olá ${name}!</h6>
-        <div class="row text-center justify-content-md-center">
+        <div class="row text-center justify-content-md-center" style="justify-content: center;">
         <div id="profile-email" class="col-4">
             ${this.profileEmail(email)}
         </div>
