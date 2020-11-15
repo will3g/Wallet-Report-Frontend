@@ -5,26 +5,90 @@
 /*      Coins       */
 /********************/
 
+.menu-mobile {
+    color: #fff;
+    padding: 5px;
+}
+
+.container-high-cryptos {
+    height: 555px;
+    overflow: overlay;
+}
+
 .bg {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
-.bitcoin {
+.btc {
     background-image: url('../../icons/coins/btc-home.png');
 }
 
-.bitcoin-cash {
-    background-image: url('../../icons/coins/bch-home.png');
+.bch {
+    background-image: url('../../icons/coins/bch2.png');
 }
 
 .dash {
     background-image: url('../../icons/coins/dash-home.svg');
 }
 
-.ripple {
+.xrp {
     background-image: url('../../icons/coins/xrp-home.png');
+}
+
+.zec {
+    background-image: url('../../icons/coins/zec.png');
+}
+
+.eth {
+    background-image: url('../../icons/coins/eth.png');
+}
+
+.eth {
+    background-image: url('../../icons/coins/eth.png');
+}
+
+.brzx {
+    background-image: url('../../icons/coins/brzx.png');
+}
+
+.dai {
+    background-image: url('../../icons/coins/dai.png');
+}
+
+.dcr {
+    background-image: url('../../icons/coins/dcr.png');
+}
+
+.ltc {
+    background-image: url('../../icons/coins/ltc.png');
+}
+
+.paxg {
+    background-image: url('../../icons/coins/paxg.png');
+}
+
+.tusd {
+    background-image: url('../../icons/coins/tusd.png');
+}
+
+.usdt {
+    background-image: url('../../icons/coins/usdt.png');
+}
+
+.zrx {
+    background-image: url('../../icons/coins/zrx.png');
+}
+
+.omg {
+    background-image: url('../../icons/coins/omg.png');
+}
+
+#profile-email,
+#profile-cpf {
+    flex: auto !important;
+    max-width: 375px;
 }
 
 .skin-default-dark .topbar {
@@ -17101,7 +17165,7 @@ Display Classes
     }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 900px) {
     html body .hidden-sm-down {
         display: none;
     }

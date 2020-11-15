@@ -28,18 +28,11 @@
                     <a class="navbar-brand" href="dashboard.html"><img class="navbar-logo" src="../assets/icons/big-logo.png" alt="Wallet Report"></a>
                 </div>
                 <div class="navbar-collapse">
-                    <ul class="navbar-nav mr-auto">
+                    <ul class="navbar-nav mr-auto" style="margin: 0 auto;">
                         <li class="nav-item hidden-sm-up"> 
                             <a class="nav-link nav-toggler waves-effect waves-light" href="javascript:void(0)">
-                                <i class="ti-menu"></i>
+                                <i class="ti-menu menu-mobile"></i>
                             </a>
-                        </li>
-                        <li class="nav-item search-box"> <a class="nav-link waves-effect waves-dark"
-                                href="javascript:void(0)"><i class="fa fa-search"></i></a>
-                            <form class="app-search">
-                                <input type="text" class="form-control" placeholder="Search enter"> <a
-                                    class="srh-btn"><i class="fa fa-times"></i></a>
-                            </form>
                         </li>
                     </ul>
                     <ul class="navbar-nav my-lg-0">
@@ -83,13 +76,6 @@
                     <div class="col-md-5 align-self-center">
                         <h4 class="text-themecolor">Dashboard</h4>
                     </div>
-                    <div class="col-md-7 align-self-center text-right">
-                        <div class="d-flex justify-content-end align-items-center">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item active">Dashboard</li>
-                            </ol>
-                        </div>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-8">
@@ -123,43 +109,11 @@
                         </div>
                     </div>
                     <div class="col-lg-4">
-                        <div class="card">
+                        <div class="container-high-cryptos card">
                             <div class="card-body">
                                 <h5 class="card-title">Criptomoedas</h5>
                                 <h6 class="card-subtitle">As criptomoedas que estão em alta</h6>
-                                <div class="steamline m-t-40">
-                                    <div class="sl-item">
-                                        <div class="sl-left bg bitcoin"></div>
-                                        <div class="sl-right">
-                                            <div class="font-medium">Bitcoin</div>
-                                            <span class="sl-date">21/10/2020 13:43</span>
-                                            <div class="desc">R$ 73.258,00</div>
-                                        </div>
-                                    </div>
-                                    <div class="sl-item">
-                                        <div class="sl-left bg bitcoin-cash"></div>
-                                        <div class="sl-right">
-                                            <div class="font-medium">Bitcoin cash</div>
-                                            <span class="sl-date">21/10/2020 11:23</span>
-                                            <div class="desc">R$ 2.124,00</div>
-                                        </div>
-                                    </div>
-                                    <div class="sl-item">
-                                        <div class="sl-left bg dash"></div>
-                                        <div class="sl-right">
-                                            <div class="font-medium">Dash</div>
-                                            <span class="sl-date">21/10/2020 14:20</span>
-                                            <div class="desc">R$ 343,00</div>
-                                        </div>
-                                    </div>
-                                    <div class="sl-item">
-                                        <div class="sl-left bg ripple"></div>
-                                        <div class="sl-right">
-                                            <div class="font-medium">Ripple</div>
-                                            <span class="sl-date">21/10/2020 10:45</span>
-                                            <div class="desc">R$ 1,24</div>
-                                        </div>
-                                    </div>
+                                <div id="high-cryptos" class="steamline m-t-40">
                                 </div>
                             </div>
                         </div>
@@ -190,55 +144,12 @@
                                         <tr>
                                             <th>Criptomoeda</th>
                                             <th>Data</th>
+                                            <th>Volume total</th>
+                                            <th>Mudança</th>
                                             <th>Valor</th>
                                         </tr>
                                     </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin</td>
-                                            <td class="txt-oflo">21/10/2020</td>
-                                            <td><span class="text-success">R$ 73.258,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Ethereum</td>
-                                            <td class="txt-oflo">21/10/2020</td>
-                                            <td><span class="text-info">R$ 2.124,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Dash</td>
-                                            <td class="txt-oflo">21/10/2020</td>
-                                            <td><span class="text-info">R$ 343,00</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Ripple</td>
-                                            <td class="txt-oflo">21/10/2020</td>
-                                            <td><span class="text-danger">R$ 1,24</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">OMG Network</td>
-                                            <td class="txt-oflo">21/10/2020</td>
-                                            <td><span class="text-success">R$ 130,32</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Zcash</td>
-                                            <td class="txt-oflo">21/10/2020</td>
-                                            <td><span class="text-danger">R$ 258,24</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Bitcoin Cash</td>
-                                            <td class="txt-oflo">21/10/2020</td>
-                                            <td><span class="text-success">R$ 4.582,24</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">Litecoin</td>
-                                            <td class="txt-oflo">21/10/2020</td>
-                                            <td><span class="text-success">R$ 467,58</span></td>
-                                        </tr>
-                                        <tr>
-                                            <td class="txt-oflo">TrueUSD</td>
-                                            <td class="txt-oflo">21/10/2020</td>
-                                            <td><span class="text-info">R$ 5,68</span></td>
-                                        </tr>
+                                    <tbody id="dashboard-table">
                                     </tbody>
                                 </table>
                             </div>
@@ -263,7 +174,9 @@
     <script src="../utils/node_modules/jquery-sparkline/jquery.sparkline.min.js"></script>
     <script src="../utils/node_modules/d3/d3.min.js"></script>
     <script src="../utils/node_modules/c3-master/c3.min.js"></script>
-    <script src="../js/dashboard/dashboard1.js"></script>
+    <script src="../js/dashboard/dashboard.js"></script>
+    <script src="../js/dashboard/dashboard-high-cryptos.js"></script>
+    <script src="../js/dashboard/dashboard-table.js"></script>
 </body>
 
 </html>
