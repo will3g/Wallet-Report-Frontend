@@ -193,6 +193,7 @@
 .container-details-coin-4 header,
 .container-details-coin-5 header {
     display: flex;
+    margin-bottom: 5px;
 }
 
 .container-details-coin-0 header div,
