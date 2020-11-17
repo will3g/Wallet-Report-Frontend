@@ -32,7 +32,7 @@ const dictionaryToCoins = [
 	{
 		slug: 'eth',
 		name: 'Ethereum',
-		img: '../assets/icons/coins/ech.png'
+		img: '../assets/icons/coins/eth.png'
 	},
 	{
 		slug: 'ltc',
@@ -82,7 +82,7 @@ const button = document.querySelector('#btn-search-coin');
 
 let Coin = 'btc';
 
-function makup(name, date, hour, value, logo, style) {
+function makup(name, date, hour, percent, volume, lowest, highest, value, logo, style) {
 	return `
     <tr>
 		<div>
@@ -92,10 +92,18 @@ function makup(name, date, hour, value, logo, style) {
 			</td>
 			<td class="txt-oflo">${date}</td>
 			<td class="txt-oflo">${hour}</td>
+			<td class="txt-oflo ${style}">${percent}</td>
+			<td class="txt-oflo">${volume}</td>
+			<td class="txt-oflo">${lowest}</td>
+			<td class="txt-oflo">${highest}</td>
 			<td><span class="${style}">${value}</span></td>
 		</div>
     </tr>
     `;
+}
+
+function transformToPercent(percentValue) {
+    return Math.floor(percentValue * 100).toFixed(2) + '%';
 }
 
 function convertBRL(value) {
@@ -129,7 +137,6 @@ function checkInputValue(inputCoin) {
 
 function getCoin(slug = 'btc', name = 'Bitcoin', img = '../assets/icons/coins/btc.png') {
 	fetch(`https://localhost:5001/details/${slug}`).then(res => res.json()).then(response => {
-
 		let LastPercentValue = 0;
 
 		table.innerHTML = '';
@@ -141,11 +148,15 @@ function getCoin(slug = 'btc', name = 'Bitcoin', img = '../assets/icons/coins/bt
 			const DateTime = coin.date.split('T');
 			let Date = convertDateToBrazil(DateTime[0]);
 			let Hour = DateTime[1];
+			let Percent = transformToPercent(coin.percentChange);
+			let Volume = convertBRL(coin.quoteVolume);
+			let lowest = convertBRL(coin.lowestAsk24);
+			let highest = convertBRL(coin.highestBid24);
 			let Value = convertBRL(coin.last);
 
 			const Compare = comparePercentValue(coin.percentChange, LastPercentValue);
 
-			table.innerHTML += makup(name, Date, Hour, Value, img, Compare);
+			table.innerHTML += makup(name, Date, Hour, Percent, Volume, lowest, highest, Value, img, Compare);
 
 			LastPercentValue = coin.percentChange;
 		})
