@@ -86,6 +86,12 @@
     }
 }
 
+@media (min-width: 1700px) {
+    .container-high-cryptos.card {
+        height: 592px;
+    }
+}
+
 #profile-email,
 #profile-cpf {
     flex: auto !important;
@@ -17165,13 +17171,13 @@ Display Classes
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 801px) {
     html body .hidden-sm-up {
         display: none;
     }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
     html body .hidden-sm-down {
         display: none;
     }
@@ -18403,6 +18409,12 @@ icons path
     background: #fff;
 }
 
+@media(max-width: 767px) {
+    .footer {
+        position: relative !important;
+    }
+}
+
 /*******************
 Wave Effects
 *******************/
@@ -18572,7 +18584,7 @@ Fixed -Header
 /*******************
 Mini sidebar
 ******************/
-@media (min-width: 769px) {
+@media (min-width: 801px) {
     .left-sidebar:hover {
         left: 0px;
     }
@@ -18606,7 +18618,7 @@ Mini sidebar
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
     .show-sidebar .left-sidebar {
         left: 0px;
     }
@@ -19039,7 +19051,7 @@ Mini sidebar
     font-size: 12px;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 801px) {
 
     .page-wrapper,
     .footer {

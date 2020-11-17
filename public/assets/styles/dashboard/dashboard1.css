@@ -77,7 +77,7 @@ button:focus {
 	}
 }
 
-@media(min-width: 1500px) {
+@media(min-width: 1700px) {
     .select-coin-container {
 		margin: 5px;
 		align-content: center;
