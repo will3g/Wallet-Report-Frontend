@@ -16,17 +16,14 @@ function transformToPercent(percentValue) {
     return Math.floor(percentValue * 100).toFixed(2) + '%';
 }
 
-
-
-function markupDashboardTable(name, slug, datetime, volume, percent, value) {
+function markupDashboardTable(slug, datetime, percent, value) {
     return `
     <tr>
         <td class="txt-oflo sl-left bg ${slug}" 
             style="background-position: left; background-origin: content-box; color: #000 !important;">
-            <p style="margin: 0 0 0 30px; padding: 0;">${name}</p>
+            <p style="margin: 0 0 0 30px; padding: 0;">${slug.toUpperCase()}</p>
         </td>
         <td class="txt-oflo">${formatDataDashboardTable(datetime)}</td>
-        <td class="txt-oflo">${convertBRLDashboardTable(volume)}</td>
         <td class="txt-oflo">${transformToPercent(percent)}</td>
         <td>${convertBRLDashboardTable(value)}</td>
     </tr>
@@ -57,10 +54,8 @@ Promise.all([
 
         if (getLastData) {
             containerDashboardTable.innerHTML += markupDashboardTable(
-                getLastData.slug.toUpperCase(), 
-                getLastData.slug,
+                getLastData.slug, 
                 getLastData.date, 
-                getLastData.quoteVolume,
                 getLastData.percentChange,
                 getLastData.last
             );
