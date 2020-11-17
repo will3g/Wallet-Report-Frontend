@@ -84,25 +84,16 @@
                                 <div class="d-flex m-b-30 align-items-center no-block">
                                     <h5 class="card-title ">Compare</h5>
                                     <div class="ml-auto">
-                                        <ul class="list-inline font-12">
-                                            <li><i class="fa fa-circle eth"></i> ETH</li>
-                                            <li><i class="fa fa-circle btc"></i> BTC</li>
-                                            <li><i class="fa fa-circle xrp"></i> XRP</li>
+                                        <ul id="header-select-coin" class="list-inline font-12">
                                         </ul>
                                     </div>
                                 </div>
                                 <div id="morris-area-chart" style="height: 350px;"></div>
                             </div>
                             <div class="card-body bg-light">
-                                <div class="row text-center m-b-20">
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <span class="text-muted">XRP</span>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <span class="text-muted">ETH</span>
-                                    </div>
-                                    <div class="col-lg-4 col-md-4 m-t-20">
-                                        <span class="text-muted">BTC</span>
+                                <div class="row text-center select-coin-container">
+                                    <p>Veja o gráfico da sua moeda preferida</p>
+                                    <div id="select-coin" class="style-6">
                                     </div>
                                 </div>
                             </div>
@@ -111,8 +102,8 @@
                     <div class="col-lg-4">
                         <div class="container-high-cryptos card">
                             <div class="card-body">
-                                <h5 class="card-title">Criptomoedas</h5>
-                                <h6 class="card-subtitle">As criptomoedas que estão em alta</h6>
+                                <h5 class="card-title">Em alta</h5>
+                                <h6 class="card-subtitle">As criptomoedas que estão em alta.</h6>
                                 <div id="high-cryptos" class="steamline m-t-40">
                                 </div>
                             </div>
@@ -125,17 +116,9 @@
                             <div class="card-body">
                                 <div class="d-flex">
                                     <div>
-                                        <h5 class="card-title">Transações de criptomoedas</h5>
-                                        <h6 class="card-subtitle">Veja as trocas em tempo real</h6>
+                                        <h5 class="card-title">Criptomoedas</h5>
+                                        <h6 class="card-subtitle">Veja as últimas atualizações.</h6>
                                     </div>
-                                    <!-- <div class="ml-auto">
-                                        <select class="custom-select b-0">
-                                            <option>Outubro</option>
-                                            <option value="1">February</option>
-                                            <option value="2" selected="">March</option>
-                                            <option value="3">April</option>
-                                        </select>
-                                    </div> -->
                                 </div>
                             </div>
                             <div class="table-responsive">
@@ -144,7 +127,6 @@
                                         <tr>
                                             <th>Criptomoeda</th>
                                             <th>Data</th>
-                                            <th>Volume total</th>
                                             <th>Mudança</th>
                                             <th>Valor</th>
                                         </tr>
@@ -177,6 +159,7 @@
     <script src="../js/dashboard/dashboard.js"></script>
     <script src="../js/dashboard/dashboard-high-cryptos.js"></script>
     <script src="../js/dashboard/dashboard-table.js"></script>
+    <script src="../js/update-cryptos.js"></script>
 </body>
 
 </html>

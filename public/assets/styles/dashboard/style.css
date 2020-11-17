@@ -5,16 +5,6 @@
 /*      Coins       */
 /********************/
 
-.menu-mobile {
-    color: #fff;
-    padding: 5px;
-}
-
-.container-high-cryptos {
-    height: 555px;
-    overflow: overlay;
-}
-
 .bg {
     background-size: contain;
     background-repeat: no-repeat;
@@ -83,6 +73,17 @@
 
 .omg {
     background-image: url('../../icons/coins/omg.png');
+}
+
+.container-high-cryptos {
+    height: 555px;
+    overflow: overlay;
+}
+
+@media(min-width: 1000px) {
+    .container-high-cryptos.card {
+        height: 573px;
+    }
 }
 
 #profile-email,
@@ -4258,6 +4259,11 @@ input[type="button"].btn-block {
 
 .dropdown-toggle:empty::after {
     margin-left: 0;
+}
+
+.menu-mobile {
+    color: #fff;
+    padding: 5px;
 }
 
 .dropdown-menu {

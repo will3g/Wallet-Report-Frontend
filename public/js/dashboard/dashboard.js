@@ -1,197 +1,197 @@
+const chart = document.querySelector('#morris-area-chart');
+const containerSelectCoin = document.querySelector('#select-coin');
+const headerSelectCoin = document.querySelector('#header-select-coin');
+
 const dict = [
-    'Bitcoin (BTC)', 
-    'Ethereum (ETH)', 
-    'Bitcoin Cash (BCH)', 
-    'Dash (DASH)', 
-    'Zcash (ZEC)', 
-    'Ripple (XRP)', 
-    'Brasiliex (BRZX)', 
-    'DAI (DAI)', 
-    'Decred (DCR)', 
-    'Litecoin (LTC)', 
-    'Network (OMG)', 
-    'Gold paxg (PAXG)',
-    'TrueUSD (TUSD)',
-    'Tether (USDT)',
-    '0x (ZRX)'
+	'Bitcoin (BTC)',
+	'Ethereum (ETH)',
+	'Bitcoin Cash (BCH)',
+	'Dash (DASH)',
+	'Zcash (ZEC)',
+	'Ripple (XRP)',
+	'Brasiliex (BRZX)',
+	'DAI (DAI)',
+	'Decred (DCR)',
+	'Litecoin (LTC)',
+	'Network (OMG)',
+	'Gold paxg (PAXG)',
+	'TrueUSD (TUSD)',
+	'Tether (USDT)',
+	'0x (ZRX)'
 ];
 
 const dictionaryToCoins = [
 	{
 		slug: 'bch',
 		name: 'Bitcoin Cash',
-		img: '../assets/icons/coins/bch2.png'
+		img: '../assets/icons/coins/bch2.png',
+		color: '#8dc351'
 	},
 	{
 		slug: 'brzx',
 		name: 'Brasiliex',
-		img: '../assets/icons/coins/brzx.png'
+		img: '../assets/icons/coins/brzx.png',
+		color: '#14c8e1'
 	},
 	{
 		slug: 'btc',
 		name: 'Bitcoin',
-		img: '../assets/icons/coins/btc.png'
+		img: '../assets/icons/coins/btc.png',
+		color: '#f90'
 	},
 	{
 		slug: 'dai',
 		name: 'Dai',
-		img: '../assets/icons/coins/dai.png'
+		img: '../assets/icons/coins/dai.png',
+		color: '#fbc349'
 	},
 	{
 		slug: 'dash',
 		name: 'Dash',
-		img: '../assets/icons/coins/dash-home.svg'
+		img: '../assets/icons/coins/dash-home.svg',
+		color: '#2573c2'
 	},
 	{
 		slug: 'dcr',
 		name: 'Decred',
-		img: '../assets/icons/coins/dcr.png'
+		img: '../assets/icons/coins/dcr.png',
+		color: '#74dcb6'
 	},
 	{
 		slug: 'eth',
 		name: 'Ethereum',
-		img: '../assets/icons/coins/ech.png'
+		img: '../assets/icons/coins/eth.png',
+		color: '#7a00ff'
 	},
 	{
 		slug: 'ltc',
 		name: 'Litcoin',
-		img: '../assets/icons/coins/ltc.png'
+		img: '../assets/icons/coins/ltc.png',
+		color: '#979797'
 	},
 	{
 		slug: 'omg',
 		name: 'OMG Network',
-		img: '../assets/icons/coins/omg.png'
+		img: '../assets/icons/coins/omg.png',
+		color: '#1a53f0'
 	},
 	{
 		slug: 'paxg',
 		name: 'Pax Gold',
-		img: '../assets/icons/coins/paxg.png'
+		img: '../assets/icons/coins/paxg.png',
+		color: '#ede70a'
 	},
 	{
 		slug: 'tusd',
 		name: 'TrueUSD',
-		img: '../assets/icons/coins/tusd.png'
+		img: '../assets/icons/coins/tusd.png',
+		color: '#139ab9'
 	},
 	{
 		slug: 'usdt',
 		name: 'Tether',
-		img: '../assets/icons/coins/usdt.png'
+		img: '../assets/icons/coins/usdt.png',
+		color: '#53ae94'
 	},
 	{
 		slug: 'xrp',
 		name: 'Ripple',
-		img: '../assets/icons/coins/xrp-home.png'
+		img: '../assets/icons/coins/xrp-home.png',
+		color: '#4fc1f6'
 	},
 	{
 		slug: 'zec',
 		name: 'Zcash',
-		img: '../assets/icons/coins/zec.png'
+		img: '../assets/icons/coins/zec.png',
+		color: '#ecb244'
 	},
 	{
 		slug: 'zrx',
 		name: '0x',
-		img: '../assets/icons/coins/zrx.png'
+		img: '../assets/icons/coins/zrx.png',
+		color: '#000000'
 	}
 ]
 
-function convertBRL(value) {
-	return value.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' });
+function convertValueToBRL(value) {
+	return value.toLocaleString('pt-br', { minimumFractionDigits: 6 });
 }
 
 function convertDateToBrazil(date) {
 	return new Date(date).toLocaleDateString('pt-BR', { timeZone: 'UTC' });
 }
 
-function formatData(date, value) {
+function formatData(slug, date, value) {
 	date = date.split('T');
-	return {
-		period: date[0],
-		BTC: value
+
+	let dataToChart = {
+		period: date[0]
 	}
+	
+	dataToChart[`${slug.toUpperCase()}`] = value;
+	return dataToChart;
 }
 
-function renderGraph(data) {
+function renderChart(slug, data, color) {
 	return Morris.Area({
 		element: 'morris-area-chart',
 		data: data,
 		xkey: 'period',
-		ykeys: ['BTC'],
-		labels: ['BTC'],
-		pointSize: 0,
-		fillOpacity: 0,
-		pointStrokeColors: ['#f90'],
+		ykeys: [`${slug.toUpperCase()}`],
+		labels: [`${slug.toUpperCase()}`],
+		pointSize: 3,
+		fillOpacity: 0.5,
+		pointStrokeColors: [`${color}`],
 		behaveLikeLine: true,
 		gridLineColor: '#f6f6f6',
-		lineWidth: 1,
+		lineWidth: 4,
 		hideHover: 'auto',
-		lineColors: ['#f90'],
+		preUnits: "R$ ",
+		lineColors: [`${color}`],
 		resize: true
 	});
 }
 
-fetch("https://localhost:5001/details/btc").then(res => res.json()).then(response => {
-	const datas = [];
+function renderHeaderSelectCoin(slug, color) {
+	return `<li><i class="fa fa-circle" style="color: ${color};"></i> ${slug.toUpperCase()}</li>`;
+}
 
-	response.map(coin => {
-		datas.push(formatData(coin.date, coin.last));
+function renderSelectCoin(slug, path) {
+	return `<button id="button-${slug}"><img src="${path}" alt="${slug}"></button>`;
+}
+
+function buildSelectCoins() {
+	dictionaryToCoins.map(coin => {
+		containerSelectCoin.innerHTML += renderSelectCoin(coin.slug, coin.img);
 	});
+}
 
-	renderGraph(datas);
-});
+function getDataToChart(slugCoin = 'btc', color = '#f90') {
+	fetch(`https://localhost:5001/details/${slugCoin}`).then(res => res.json()).then(response => {
+		const datas = [];
+		headerSelectCoin.innerHTML = renderHeaderSelectCoin(slugCoin, color);
+		console.log(color);
+		response.map(coin => {
+			datas.push(formatData(slugCoin, coin.date, coin.last));
+		});
 
-
-
-/*
-
-$(function () {
-	"use strict";
-	Morris.Area({
-		element: 'morris-area-chart',
-		data: [{
-			period: '2010',
-			BTC: 0,
-			ETH: 0,
-			XRP: 0
-		}, {
-			period: '2011',
-			BTC: 130,
-			ETH: 100,
-			XRP: 80
-		}, {
-			period: '2012',
-			BTC: 100,
-			ETH: 60,
-			XRP: 70
-		}, {
-			period: '2013',
-			BTC: 210,
-			ETH: 160,
-			XRP: 140
-		}, {
-			period: '2014',
-			BTC: 180,
-			ETH: 150,
-			XRP: 140
-		}, {
-			period: '2015',
-			BTC: 120,
-			ETH: 100,
-			XRP: 80
-		}],
-		xkey: 'period',
-		ykeys: ['BTC', 'ETH', 'XRP'],
-		labels: ['BTC', 'ETH', 'XRP'],
-		pointSize: 0,
-		fillOpacity: 0,
-		pointStrokeColors: ['#f90', '#009a13', '#00a1ff'],
-		behaveLikeLine: true,
-		gridLineColor: '#f6f6f6',
-		lineWidth: 1,
-		hideHover: 'auto',
-		lineColors: ['#f90', '#009a13', '#00a1ff'],
-		resize: true
+		chart.innerHTML = '';
+		renderChart(slugCoin, datas, color);
 	});
+}
 
-});
+function selectCoin() {
+	dictionaryToCoins.map(coin => {
+		let tagButton = document.querySelector(`#button-${coin.slug}`);
+		tagButton.addEventListener('click', e => {
+			e.preventDefault();
+			getDataToChart(coin.slug, coin.color)
+		});
+	});
+}
 
-*/
+(() => {
+	getDataToChart();
+	buildSelectCoins();
+	selectCoin();
+})();

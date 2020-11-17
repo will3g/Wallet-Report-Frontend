@@ -2,35 +2,94 @@
 
 .o-income .c3 line,
 .o-income .c3 path {
-  stroke: #e9ecef;
+    stroke: #e9ecef;
 }
 
 .news-slide .carousel-item {
-  min-height: 515px;
-  background: -moz-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.08) 56%, rgba(0, 0, 0, 0.65) 100%);
-  /* FF3.6-15 */
-  background: -webkit-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.08) 56%, rgba(0, 0, 0, 0.65) 100%);
-  /* Chrome10-25,Safari5.1-6 */
-  background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.08) 56%, rgba(0, 0, 0, 0.65) 100%);
-  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
-  /* IE6-9 */
+    min-height: 515px;
+    background: -moz-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.08) 56%, rgba(0, 0, 0, 0.65) 100%);
+    /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, transparent 50%, rgba(0, 0, 0, 0.08) 56%, rgba(0, 0, 0, 0.65) 100%);
+    /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, transparent 50%, rgba(0, 0, 0, 0.08) 56%, rgba(0, 0, 0, 0.65) 100%);
+    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+    /* IE6-9 */
 }
 
 .news-slide .carousel-caption {
-  text-align: left;
-  left: 25px;
-  right: 25px;
+    text-align: left;
+    left: 25px;
+    right: 25px;
 }
 
 .btc {
-  color: #f90;
+    color: #f90;
 }
 
 .eth {
-  color: #009a13;
+    color: #009a13;
 }
 
 .xrp {
-  color: #00a1ff;
+    color: #00a1ff;
+}
+
+text[text-anchor=middle] {
+    visibility: hidden;
+}
+
+.select-coin-container {
+	margin: 5px;
+	display: flex;
+	justify-content: center;
+}
+
+#select-coin {
+	display: flex;
+	overflow-y: hidden;
+    overflow-x: scroll;
+}
+
+#select-coin button {
+	margin-right: 5px;
+}
+
+button:focus {
+    outline: 0;
+}
+
+#select-coin button,
+#select-coin img {
+	border: 0;
+	background-color: #f8f9fa;
+}
+
+#select-coin img {
+	width: 48px;
+	height: 48px;
+}
+
+@media(min-width: 1000px) {
+	#select-coin img {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+@media(min-width: 1500px) {
+    .select-coin-container {
+		margin: 5px;
+		align-content: center;
+		flex-direction: column;
+	}
+	
+	#select-coin {
+		overflow-x: hidden;
+	}
+
+    #select-coin img {
+        width: 50px;
+        height: 50px;
+    }
 }
