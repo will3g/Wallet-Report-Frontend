@@ -18,7 +18,7 @@ function graphData(data, index) {
 		{
 			data: data[index].childrens,
 			color: '#ffa500',
-			points: { radius: 1, fillColor: '#ffa500' }
+			points: { radius: 2, fillColor: '#ffa500' }
 		}
 	];
 }
