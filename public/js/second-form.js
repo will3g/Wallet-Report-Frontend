@@ -42,8 +42,6 @@ function Message(txtMessage) {
 		if (!ValidateEmail(inputEmail.value))
 			Message('Email inválido.');
 
-		console.log(ValidatePassword(inputPassword.value));
-
 		if (!ValidatePassword(inputPassword.value) && ValidateEmail(inputEmail.value))
 			Message('Senha deve ter no mínimo 8 caracteres.');
 

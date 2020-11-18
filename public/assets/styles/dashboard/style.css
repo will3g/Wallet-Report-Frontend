@@ -86,9 +86,9 @@
     }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 1440px) {
     .container-high-cryptos.card {
-        height: 592px;
+        height: 583px;
     }
 }
 

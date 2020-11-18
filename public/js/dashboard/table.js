@@ -136,7 +136,7 @@ function checkInputValue(inputCoin) {
 }
 
 function getCoin(slug, name, img) {
-	const resposta = fetch(`https://localhost:5001/details/${slug}`).then(res => res.json()).then(response => {
+	fetch(`https://localhost:5001/details/${slug}`).then(res => res.json()).then(response => {
 		let LastPercentValue = 0;
 
 		table.innerHTML = '';

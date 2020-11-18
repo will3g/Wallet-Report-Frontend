@@ -170,7 +170,7 @@ function getDataToChart(slugCoin = 'btc', color = '#f90') {
 	fetch(`https://localhost:5001/details/${slugCoin}`).then(res => res.json()).then(response => {
 		const datas = [];
 		headerSelectCoin.innerHTML = renderHeaderSelectCoin(slugCoin, color);
-		console.log(color);
+
 		response.map(coin => {
 			datas.push(formatData(slugCoin, coin.date, coin.last));
 		});
