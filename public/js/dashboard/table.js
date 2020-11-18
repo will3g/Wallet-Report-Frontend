@@ -135,8 +135,8 @@ function checkInputValue(inputCoin) {
 	return InfoDictCoin;
 }
 
-function getCoin(slug = 'btc', name = 'Bitcoin', img = '../assets/icons/coins/btc.png') {
-	fetch(`https://localhost:5001/details/${slug}`).then(res => res.json()).then(response => {
+function getCoin(slug, name, img) {
+	const resposta = fetch(`https://localhost:5001/details/${slug}`).then(res => res.json()).then(response => {
 		let LastPercentValue = 0;
 
 		table.innerHTML = '';
@@ -160,12 +160,15 @@ function getCoin(slug = 'btc', name = 'Bitcoin', img = '../assets/icons/coins/bt
 
 			LastPercentValue = coin.percentChange;
 		})
-	});
+	})
+	.catch(() => {
+		alert('Moeda não encontrada no sistema.');
+	});;
 }
 
 // Init
 window.document.onload = (() => {
-	getCoin();
+	getCoin('btc', 'Bitcoin', '../assets/icons/coins/btc.png');
 })();
 
 // Search
