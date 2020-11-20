@@ -55,20 +55,9 @@
     width: 530px;
     text-align: end;
     font-size: 40px;
-    margin-top: 70px;
+    margin-top: 42%;
     margin-bottom: 70px;
     font-weight: normal;
-}
-
-.right-section-three h2::after {
-    content: '';
-    width: 40px;
-    height: 3px;
-    /* background-color: #00b9fc; */
-    margin-left: -40px;
-    bottom: 0;
-    position: absolute;
-    transition: all .2s ease-in-out;
 }
 
 .right-section-three>div>p:first-child {
